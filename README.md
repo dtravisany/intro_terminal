@@ -21,9 +21,8 @@ Siguiendo esta comparativa, las similitudes entre ambos Sistemas Operativos son:
 
 Por otra parte, Unix es seguro, estable y permite la ejecución de tareas con múltiples usuarios. Esto lo ha transformado en el sistema operativo de excelencia para computación de alto rendimiento (HPC: High Performance Computing). Se puede utilizar en diferentes tipos de hardware desde RaspberryPi, celulares y tablets (Android), notebook y PC hasta supercomputadores como Leftraru del [NLHPC](http://www.nlhpc.cl).
 
-## Trabajo preliminar:
+### Puesta a punto
 
-Conectarse al servidor.
 
 Para facilitar este y los demás prácticos, he habilitado una de nuestras máquinas para la ejecución de tareas en este curso.
 
@@ -56,34 +55,72 @@ Si están en:
 
 ### Protocolo SSH
 
+Ahora, en la terminal, utilizaremos el protocolo [SSH](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html).
 
+> :warning:  **NOTA**: De ahora en adelante, cada vez que vea `instrucción` se referira a un comando/programa a ejecutar, mientras que:
 
-Ya, en la terminal, utilizaremos el protocolo [SSH](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html).
+		esto será código a escribir en la terminal
+
+> :warning: **NOTA**: En *Unix*, la terminal es *case sensitive*, es decir, escribir una `instrucción` es distinto a escribir  una `INSTRUCCIÓN` o `Instrucción` (*Windows* es diferente). Lo mismo pasa con los usuarios y los nombres de archivos. 
+
+> :warning: **NOTA**: La mayoría de las veces, cuando tenga un problema al ejecutar una instrucción, se debe a errores tipográficos (*typos*). 
  
 Una vez abierta la terminal (solo en *Win10*, *Linux*, *MacOS*), cada grupo debe escribir lo siguiente:
 
          ssh  usuario@servidor
 
 
-> :warning: **NOTA**: Las credenciales se les entregaran en la pizarra. En el nombre de usuario y la contraseña.
+> :warning: **NOTA**: Las credenciales se les entregaran en la pizarra.
+
 
 Mediante el comando SSH podremos entrar al servidor de Mathomics. 
 
-
-> :warning:  **NOTA**: De ahora en adelante, cada vez que vea `instrucción` se referira a un comando de Unix, mientras que:
-
-		esto será código a escribir en la terminal
-
-> :warning: **NOTA**: En *Unix*, la terminal es *case sensitive*, es decir, escribir una `instrucción` es distinto a escribir  una `INSTRUCCIÓN` o `Instrucción` (*Windows* es diferente). Lo mismo pasa con los usuarios y los nombres de archivos. 
-
-
 ### Estructura de Directorios
 
-Dentro del servidor podemos ver donde estamos ubicados utilizando `pwd` (*print working directory*). 
+En linux los directorios se organizan en una Jerarquía, es decir hay un directorio raíz y desde ese directorio se accede a sub-direcotrios.
+
+Veremos la estructura de directorios de Unix en pizarra.
+
+Dentro del servidor podemos ver donde estamos ubicados utilizando `pwd` ([print working directory](https://linux.die.net/man/1/pwd)). 
 
 		pwd
 
-### Estructura de Directorios
+Para saber el contenido del directorio donde estamos ubicados utilizamos `ls` ([list](https://linux.die.net/man/1/ls))
 
-Unix 
+
+		ls
+
+Si tenemos más de un directorio podemos ingresar a ese directorio con el comando `cd` ([change directory](http://linuxcommand.org/lc3_man_pages/cdh.html))
+
+		cd ejemplo
+
+### Revisar Archivos
+
+
+Podemos mirar (Read Only) archivos con varios comandos como por ejemplo `more` ([man more](https://linux.die.net/man/1/more)):
+
+
+		more sequencia1.fasta
+
+También está el comando `less` ([man less](https://linux.die.net/man/1/less)):
+
+		less secuencia1.fasta
+
+
+Otro comando es `cat` ([man cat](https://linux.die.net/man/1/cat)):
+
+
+		cat secuencia1.fasta
+
+Hay diferencias?.
+
+> :warning: **NOTA** `cat` es utilizado para concatenar archivos.
+
+
+> :star: **HACK**:  Cuando quiere escribir un comando o buscar un directorio o escribir el nombre de un archivo, puede utilizar autocompletar con la tecla tab. [Link](https://i.ytimg.com/vi/KEkrWRHCDQU/hqdefault.jpg)
+
+
+### Manual
+
+
 
