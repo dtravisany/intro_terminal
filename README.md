@@ -265,4 +265,69 @@ Es el mismo resultado que en:
 Por qué?
 
 
+## PARTE II 
+
+
+### Revisión de un archivo FASTQ.
+
+
+
+Los archivos [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format), son archivos de texto que almacenan las secuencias nucleotídicas que provienen de una secuenciación
+y sus valores de calidad correspondientes en formato [ASCII](https://es.wikipedia.org/wiki/ASCII). 
+Actualmente se utiliza el código [ASCII partiendo desde el valor 33](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm).
+
+La calidad de los archivos FASTQ es el mapeo a un valor entero de la probabilidad de error en la lectura de un nucleótido por parte de la máquina.
+
+Este es el valor [PHRED](https://genome.cshlp.org/content/8/3/186.short)
+
+A continuación podemos ver una tabla de resumen de las calidades Phred y la probabilidad de error:
+
+| Valor Phred| Probabilidad de base errónea | Precisión |
+| ----- | ---- |----|
+| 10 | 1 en 10 | 90% |
+| 20 | 1 en 100 | 99% |
+| 30 | 1 en 1000 | 99.9% |
+| 40 | 1 en 10000 | 99.99% |
+| 50 | 1 en 100000 | 99.999% |
+
+
+Utilizaremos el programa [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). FastQC nos muestra estadísticas sobre nuestros resultados de secuenciación.
+
+
+Revisemos nuestro archivo con el comando `fastqc`:
+
+
+		fastqc 
+
+
+Ahora revisaremos cada uno de los campos en el siguiente [link](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/):
+
+
+Ahora ejecutaremos `fastqc` sin GUI, entraremos al help:
+
+		fastqc --help
+
+
+Ejecutaremos todo:
+
+		fastqc archivo.fastq.gz
+
+
+Ahora desde nuestro computador abrimos una terminal y nos traemos el informe utilizando SCP:
+
+
+		scp usuario@servidor:rawReads/reporte
+
+
+Ahora extraiga su archivo y veamos el archivo.
+
+
+Cómo explica el problema de la baja de calidad al final de los reads? [Hint](https://www.nature.com/articles/nbt.1585)
+
+
+
+
+
+
+
 
