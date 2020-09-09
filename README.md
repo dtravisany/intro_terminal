@@ -100,7 +100,7 @@ Si tenemos más de un directorio podemos ingresar a ese directorio con el comand
 Podemos mirar (Read Only) archivos con varios comandos como por ejemplo `more` ([man more](https://linux.die.net/man/1/more)):
 
 
-		more sequencia1.fasta
+		more secuencia1.fasta
 
 También está el comando `less` ([man less](https://linux.die.net/man/1/less)):
 
