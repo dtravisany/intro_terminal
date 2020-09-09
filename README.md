@@ -3,12 +3,12 @@
 
 ### Resumen
 
-Práctico para entender UNIX
+Práctico para entender UNIX/Linux
 
 
 ### Introducción
 
-Unix es el sistema operativo estándar para computoi científico. Algo similar sucede con Windows, pero en computadores de escritorio (PC).
+Unix/Linux es el sistema operativo estándar para computo científico. Algo similar sucede con Windows, pero en computadores de escritorio (PC).
 
 Siguiendo esta comparativa, las similitudes entre ambos Sistemas Operativos son:
 
