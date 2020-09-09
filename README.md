@@ -310,19 +310,19 @@ Ahora ejecutaremos `fastqc` sin GUI, entraremos al help:
 
 Ejecutaremos todo:
 
-		fastqc archivo.fastq.gz
+		fastqc sra_data.fastq.gz
 
 
 Ahora desde nuestro computador abrimos una terminal y nos traemos el informe utilizando SCP:
 
 
-		scp usuario@servidor:rawReads/reporte
+		scp usuario@servidor:sra_data_fastqc.zip .  
 
 
-Ahora extraiga su archivo y veamos el archivo.
+Ahora en su computador extraiga su archivo y veamos el archivo.
 
 
-Cómo explica el problema de la baja de calidad al final de los reads? [Hint](https://www.nature.com/articles/nbt.1585)
+Cómo explica el problema de la baja de calidad al final de los reads? Hint1: Phasing [Hint2](https://www.nature.com/articles/nbt.1585)
 
 
 
