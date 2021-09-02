@@ -24,9 +24,9 @@ Por otra parte, Unix es seguro, estable y permite la ejecución de tareas con m�
 ### Puesta a punto
 
 
-Para facilitar este y los demás prácticos, he habilitado una de nuestras máquinas para la ejecución de tareas en este curso.
+Para facilitar este y los demás prácticos, he habilitado una de mis máquinas para la ejecución de tareas en este curso.
 
-Además, en prácticos posteriores, algunos de los cálculos que realizaremos requeriran de un poder de cómputo moderado.  Por esto nos conectaremos a uno de los servidores de [Mathomics](http://www.mathomics.cl). 
+Además, en prácticos posteriores, algunos de los cálculos que realizaremos requeriran de un poder de cómputo moderado.  Por esto nos conectaremos a un servidor personal que puede ejecutar estas tareas. 
 
 Para esto necesitaremos una conexión a internet.
 
