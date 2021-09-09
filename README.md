@@ -187,7 +187,7 @@ En el caso de que necesitaramos buscar o extraer información desde un archivo, 
 
 Para este caso utilizaremos el archivo [GFF3](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md) que fue descargado desde [NCBI - GenBank](https://www.ncbi.nlm.nih.gov/genbank/).
 
-		less secuencia1.gbff
+		less secuencia1.gff
 
 Veremos que este archivo posee varias columnas y filas, supongamos que queremos capturar las filas que tienen la palabra pseudogene
 
@@ -316,7 +316,7 @@ Ejecutaremos todo:
 Ahora desde nuestro computador abrimos una terminal y nos traemos el informe utilizando SCP:
 
 
-		scp usuario@servidor:sra_data_fastqc.zip .  
+		scp usuario@servidor:ejercicio/sra_data_fastqc.zip .  
 
 
 Ahora en su computador extraiga su archivo y veamos el archivo.
