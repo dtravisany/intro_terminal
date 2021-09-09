@@ -187,11 +187,11 @@ En el caso de que necesitaramos buscar o extraer información desde un archivo, 
 
 Para este caso utilizaremos el archivo [GFF3](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md) que fue descargado desde [NCBI - GenBank](https://www.ncbi.nlm.nih.gov/genbank/).
 
-		less secuencia1.gff
+		less secuencia1.gff3
 
 Veremos que este archivo posee varias columnas y filas, supongamos que queremos capturar las filas que tienen la palabra pseudogene
 
-		grep "pseudogene" secuencia1.gff
+		grep "pseudogene" secuencia1.gff3
 
 Supongamos que ahora queremos contar cuantas lineas/filas tienen la palabra pseudogene. Podemos revisar utilizando man o ejecutando grep --help si es que grep tiene una opción que nos permita realizar este cálculo:
 
@@ -200,11 +200,11 @@ Supongamos que ahora queremos contar cuantas lineas/filas tienen la palabra pseu
 
 Como vemos la opción -c o --count nos permite contar las lineas que cumplen con el patrón de búsqueda:
 
-		grep --count "pseudogene" secuencia1.gff
+		grep --count "pseudogene" secuencia1.gff3
 
 Ejecutar:
 
-		grep -c "pseudogene" secuencia1.gff
+		grep -c "pseudogene" secuencia1.gff3
 
 Es diferente?
 
@@ -217,21 +217,21 @@ Una de las funcionalidades más potente de unix es la concatenación de instrucc
 
 Podemos utilizar la concatenación de dos grep:
 
-		grep "pseudogene" secuencia1.gff | grep "NZ_CP011849"
+		grep "pseudogene" secuencia1.gff3 | grep "NZ_CP011849"
 
 Qué pasó?
 
 Si utilizamos:
 
 		
-		grep -c "pseudogene" secuencia1.gff | grep "NZ_CP011849"
+		grep -c "pseudogene" secuencia1.gff3 | grep "NZ_CP011849"
 
 Cuánto da el resultado?
 
 y si utilizamos:
 
 		
-		grep "pseudogene" secuencia1.gff | grep -c "NZ_CP011849"
+		grep "pseudogene" secuencia1.gff3 | grep -c "NZ_CP011849"
 
 Cuánto da el resultado?
 
@@ -245,7 +245,7 @@ Por qué son distintos?, es concordante con lo presentado en NCBI?
 Supongamos que ahora queremos contar los genes en el archivo gff que pertenecen al cromosoma, ejecutemos:
 
 
-		grep "gene" secuencia1.gff | grep -c "NZ_CP011849"
+		grep "gene" secuencia1.gff3 | grep -c "NZ_CP011849"
 
 Es concordante con lo presentado en NCBI?.
 
@@ -255,11 +255,11 @@ Qué pasó?
 Que pasa si ejecutamos:
 
 
-		grep $'\tgene' secuencia1.gff | grep -c "NZ_CP011849"
+		grep $'\tgene' secuencia1.gff3 | grep -c "NZ_CP011849"
 
 Es el mismo resultado que en:
 
-		grep $'\tgene' secuencia1.gff | grep "NZ_CP011849" | wc -l
+		grep $'\tgene' secuencia1.gff3 | grep "NZ_CP011849" | wc -l
 
 
 Por qué?
