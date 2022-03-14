@@ -73,7 +73,7 @@ Una vez abierta la terminal (solo en *Win10*, *Linux*, *MacOS*), cada grupo debe
 > :warning: **NOTA**: Las credenciales se les entregaran en la pizarra.
 
 
-Mediante el comando SSH podremos entrar al servidor de Mathomics. 
+Mediante el comando SSH podremos entrar al servidor para el curso. 
 
 ### Estructura de Directorios
 
@@ -326,10 +326,13 @@ Cómo explica el problema de la baja de calidad al final de los reads? Hint1: Ph
 
 
 ------Ejercicio:-------------------
+Es muy importante que para la próxima clase de High Performance Computing, ya sea capaz de saber acceder a un servidor mediante SSH y pueda crear y editar archivos mediante `vi` o `nano`. Además, cuando uno quiere tener estadísticas rápidas de las secuencias biológicas, son muy útiles las expresiones regulares y el comando grep.
+
+Por esto:
 
 1. Vuelva a ejecutar toda el práctico de nuevo hasta que se sienta capaz de dominar la terminal.
-2. Escriba una pequeña reseña sobre usted utilizando Vi en un archivo llamado APELLIDONOMBRE.txt (Donde APELLIDO es su apellido y NOMBRE es su nombre).
- 
+2. Escriba una pequeña reseña sobre usted utilizando `vi` en un archivo llamado APELLIDONOMBRE_VIM.txt (Donde APELLIDO es su apellido y NOMBRE es su nombre).
+3. Escriba la misma reseña sobre usted, pero utilizando `nano` llamado APELLIDONOMBRE_NANO.txt (Donde APELLIDO es su apellido y NOMBRE es su nombre).
 
 
 
