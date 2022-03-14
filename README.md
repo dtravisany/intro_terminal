@@ -153,7 +153,7 @@ Por ejemplo veamos la página del manual para el comando `head`
 		man head
 
 
-Qué le imprimirá el siguiente comando:
+¿Qué le imprimirá el siguiente comando?:
 
 		head -n 1 secuencia.fna 
 
