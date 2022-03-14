@@ -77,9 +77,9 @@ Mediante el comando SSH podremos entrar al servidor de Mathomics.
 
 ### Estructura de Directorios
 
-En linux los directorios se organizan en una Jerarquía, es decir hay un directorio raíz y desde ese directorio se accede a sub-direcotrios.
+En linux los directorios se organizan en una Jerarquía, es decir hay un directorio raíz y desde ese directorio se accede a sub-directorios.
 
-Veremos la estructura de directorios de Unix en pizarra.
+Recordemos la estructura de directorios en LINUX.
 
 Dentro del servidor podemos ver donde estamos ubicados utilizando `pwd` ([print working directory](https://linux.die.net/man/1/pwd)). 
 
@@ -100,11 +100,11 @@ Si tenemos más de un directorio podemos ingresar a ese directorio con el comand
 Podemos mirar (Read Only) archivos con varios comandos como por ejemplo `more` ([man more](https://linux.die.net/man/1/more)):
 
 
-		more secuencia1.fasta
+		more secuencia.fna
 
 También está el comando `less` ([man less](https://linux.die.net/man/1/less)):
 
-		less secuencia1.fasta
+		less secuencia.fna
 
 
 Hay diferencias?.
@@ -112,7 +112,7 @@ Hay diferencias?.
 Otro comando es `cat` ([man cat](https://linux.die.net/man/1/cat)):
 
 
-		cat secuencia1.fasta
+		cat secuencia.fna
 
 > :warning: **NOTA** `cat` es utilizado para concatenar archivos.
 
@@ -123,19 +123,19 @@ Otro comando es `cat` ([man cat](https://linux.die.net/man/1/cat)):
 
 Probemos con el siguiente comando `head`:
 
-		head secuencia1.fasta
+		head secuencia.fna
 
 o con el comando `tail`:
 
-		tail secuencia1.fasta
+		tail secuencia.fna
 
 Saber el número de palabras:
 
-		wc secuencia1.fasta
+		wc secuencia.fna
 
 Saber el número de lineas:
 
-		wc -l secuencia1.fasta
+		wc -l secuencia.fna
 
 
 ### Manual
@@ -155,7 +155,7 @@ Por ejemplo veamos la página del manual para el comando `head`
 
 Qué le imprimirá el siguiente comando:
 
-		head -n 1 secuencia1.fasta 
+		head -n 1 secuencia.fna 
 
 
 ### Revisión de archivos Parte 2 (Edición)
@@ -175,7 +175,7 @@ y escribiremos:
 
 		wq!
 
-Esto significa write quit and no questions.
+Esto significa write (w) quit (q) and no questions (!).
 
 
 Haremos algunos otros ejemplos.
@@ -187,11 +187,11 @@ En el caso de que necesitaramos buscar o extraer información desde un archivo, 
 
 Para este caso utilizaremos el archivo [GFF3](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md) que fue descargado desde [NCBI - GenBank](https://www.ncbi.nlm.nih.gov/genbank/).
 
-		less secuencia1.gff3
+		less secuencia.gff3
 
 Veremos que este archivo posee varias columnas y filas, supongamos que queremos capturar las filas que tienen la palabra pseudogene
 
-		grep "pseudogene" secuencia1.gff3
+		grep "pseudogene" secuencia.gff3
 
 Supongamos que ahora queremos contar cuantas lineas/filas tienen la palabra pseudogene. Podemos revisar utilizando man o ejecutando grep --help si es que grep tiene una opción que nos permita realizar este cálculo:
 
@@ -200,11 +200,11 @@ Supongamos que ahora queremos contar cuantas lineas/filas tienen la palabra pseu
 
 Como vemos la opción -c o --count nos permite contar las lineas que cumplen con el patrón de búsqueda:
 
-		grep --count "pseudogene" secuencia1.gff3
+		grep --count "pseudogene" secuencia.gff3
 
 Ejecutar:
 
-		grep -c "pseudogene" secuencia1.gff3
+		grep -c "pseudogene" secuencia.gff3
 
 Es diferente?
 
@@ -217,21 +217,21 @@ Una de las funcionalidades más potente de unix es la concatenación de instrucc
 
 Podemos utilizar la concatenación de dos grep:
 
-		grep "pseudogene" secuencia1.gff3 | grep "NZ_CP011849"
+		grep "pseudogene" secuencia.gff3 | grep "NZ_CP011849"
 
 Qué pasó?
 
 Si utilizamos:
 
 		
-		grep -c "pseudogene" secuencia1.gff3 | grep "NZ_CP011849"
+		grep -c "pseudogene" secuencia.gff3 | grep "NZ_CP011849"
 
 Cuánto da el resultado?
 
 y si utilizamos:
 
 		
-		grep "pseudogene" secuencia1.gff3 | grep -c "NZ_CP011849"
+		grep "pseudogene" secuencia.gff3 | grep -c "NZ_CP011849"
 
 Cuánto da el resultado?
 
@@ -245,7 +245,7 @@ Por qué son distintos?, es concordante con lo presentado en NCBI?
 Supongamos que ahora queremos contar los genes en el archivo gff que pertenecen al cromosoma, ejecutemos:
 
 
-		grep "gene" secuencia1.gff3 | grep -c "NZ_CP011849"
+		grep "gene" secuencia.gff3 | grep -c "NZ_CP011849"
 
 Es concordante con lo presentado en NCBI?.
 
@@ -255,11 +255,11 @@ Qué pasó?
 Que pasa si ejecutamos:
 
 
-		grep $'\tgene' secuencia1.gff3 | grep -c "NZ_CP011849"
+		grep $'\tgene' secuencia.gff3 | grep -c "NZ_CP011849"
 
 Es el mismo resultado que en:
 
-		grep $'\tgene' secuencia1.gff3 | grep "NZ_CP011849" | wc -l
+		grep $'\tgene' secuencia.gff3 | grep "NZ_CP011849" | wc -l
 
 
 Por qué?
@@ -310,13 +310,13 @@ Ahora ejecutaremos `fastqc` sin GUI, entraremos al help:
 
 Ejecutaremos todo:
 
-		fastqc sra_data.fastq.gz
+		fastqc SRR18080892.fastq
 
 
 Ahora desde nuestro computador abrimos una terminal y nos traemos el informe utilizando SCP:
 
 
-		scp usuario@servidor:ejercicio/sra_data_fastqc.zip .  
+		scp usuario@servidor:ejercicio/SRR18080892_fastqc.zip .  
 
 
 Ahora en su computador extraiga su archivo y veamos el archivo.
@@ -325,6 +325,11 @@ Ahora en su computador extraiga su archivo y veamos el archivo.
 Cómo explica el problema de la baja de calidad al final de los reads? Hint1: Phasing [Hint2](https://www.nature.com/articles/nbt.1585)
 
 
+------Ejercicio:-------------------
+
+1. Vuelva a ejecutar toda el práctico de nuevo hasta que se sienta capaz de dominar la terminal.
+2. Escriba una pequeña reseña sobre usted utilizando Vi en un archivo llamado APELLIDONOMBRE.txt (Donde APELLIDO es su apellido y NOMBRE es su nombre).
+ 
 
 
 
