@@ -49,7 +49,7 @@ Si están en:
  
   - Hablando en serio, es la interfaz que se utiliza para ejecutar comandos/programas o analizar los datos.
 
-  - La mayoría de los programas que utilizamos a diario tienen una [GUI](https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario)(Graphical User Interface). La mayoría de los programas más utilizados en Bioinformática no poseen una interfaz gráfica, esto principalmente porque los servidores donde se ejecutan los programas no tienen GUI, además de que requiere una etapa adiciónal de diseño y presupuesto.
+  - La mayoría de los programas que utilizamos a diario tienen una [GUI](https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario)(Graphical User Interface). Sin embargo, la mayoría de los programas más utilizados en Bioinformática genómica no poseen una interfaz gráfica, esto principalmente porque los servidores donde se ejecutan los programas no tienen GUI, además de que requiere una etapa adiciónal de diseño y presupuesto que no justifica para la aplicación.
 
   - Saber utilizar la terminal nos proveerá de una cantidad sustancial de ventajas en HPC.
 
