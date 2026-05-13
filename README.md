@@ -3,7 +3,7 @@
 
 ### Resumen
 
-Práctico para entender UNIX/Linux
+Práctico para familiarizarnos con UNIX/Linux
 
 
 ### Introducción
@@ -305,7 +305,9 @@ A continuación podemos ver una tabla de resumen de las calidades Phred y la pro
 
 
 Utilizaremos el programa [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). FastQC nos muestra estadísticas sobre nuestros resultados de secuenciación.
+Para esto activaremos el ambiente que tiene fastqc:
 
+		conda activate fastqc
 
 Revisemos nuestro archivo con el comando `fastqc`:
 
