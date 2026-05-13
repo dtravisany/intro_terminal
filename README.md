@@ -160,6 +160,19 @@ Por ejemplo veamos la página del manual para el comando `head`
 
 ### Revisión de archivos Parte 2 (Edición)
 
+Ahora nos devolveremosnuestra carpeta principal:
+
+		cd ..
+
+Crearemos una carpeta con nuestras iniciales, por ejemplo DT
+
+		mkdir DT
+
+Entraremos a nuestra carpeta recien creada
+
+		cd DT
+
+Dentro de nuestra carpeta crearemos algunos archivos como veremos a continuación.
 
 Existen diferentes editores de texto para la terminal, uno de los más poderoso es [vim](https://www.vim.org/).
 
@@ -307,28 +320,26 @@ Ahora ejecutaremos `fastqc` sin GUI, entraremos al help:
 
 		fastqc --help
 
-
+Ahora crearemos una carpeta donde guardar nuestro output:
+```bash
+	mkdir -p ~/NOMBREAPELLIDO/qc_results
+```
 Ejecutaremos todo:
 
-		fastqc SRR18080892.fastq
+		fastqc -o ~/NOMBREAPELLIDO/qc_results SRR18080892.fastq
 
 
 Ahora desde nuestro computador abrimos una terminal y nos traemos el informe utilizando SCP:
 
 
-		scp usuario@servidor:ejercicio/SRR18080892_fastqc.zip .  
+		scp usuario@servidor:NOMBREAPELLIDO/qc_results/SRR18080892_fastqc.zip .  
 
 
 Ahora en su computador extraiga su archivo y veamos el archivo.
 
 
-Cómo explica el problema de la baja de calidad al final de los reads? Hint1: Phasing [Hint2](https://www.nature.com/articles/nbt.1585)
-
 
 ------Ejercicio:-------------------
-Es muy importante que para la próxima clase de High Performance Computing, ya sea capaz de saber acceder a un servidor mediante SSH y pueda crear y editar archivos mediante `vi` o `nano`. Además, cuando uno quiere tener estadísticas rápidas de las secuencias biológicas, son muy útiles las expresiones regulares y el comando grep.
-
-Por esto:
 
 1. Vuelva a ejecutar toda el práctico de nuevo hasta que se sienta capaz de dominar la terminal.
 2. Escriba una pequeña reseña sobre usted utilizando `vi` en un archivo llamado APELLIDONOMBRE_VIM.txt (Donde APELLIDO es su apellido y NOMBRE es su nombre).
