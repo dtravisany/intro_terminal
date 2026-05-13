@@ -34,7 +34,7 @@ Si están en:
 
   - *Linux/MacOS*, puede utilizar [la terminal](https://help.ubuntu.com/kubuntu/desktopguide/es/terminals.html) (consola).
 
-  - *Windows10* utilice el [Símbolo del sistema](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema) (`cmd`).
+  - *Windows10-11* utilice el [Símbolo del sistema](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema) (`cmd`).
 
   - Si están en *Windows* (anterior a *Windows 10*) deben instalar un programa llamado [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
@@ -45,13 +45,13 @@ Si están en:
 
   - Antiguamente, era la única forma de interactuar con los computadores. 
   
-  - La terminal es bastante agreste!.
+  - La terminal es bastante agreste!
  
   - Hablando en serio, es la interfaz que se utiliza para ejecutar comandos/programas o analizar los datos.
 
   - La mayoría de los programas que utilizamos a diario tienen una [GUI](https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario)(Graphical User Interface). Sin embargo, la mayoría de los programas más utilizados en Bioinformática genómica no poseen una interfaz gráfica, esto principalmente porque los servidores donde se ejecutan los programas no tienen GUI, además de que requiere una etapa adiciónal de diseño y presupuesto que no justifica para la aplicación.
 
-  - Saber utilizar la terminal nos proveerá de una cantidad sustancial de ventajas en HPC.
+  - Saber utilizar la terminal nos proveerá de una cantidad sustancial de ventajas en Bioinformática y en HPC.
 
 ### Protocolo SSH
 
@@ -70,7 +70,7 @@ Una vez abierta la terminal (solo en *Win10*, *Linux*, *MacOS*), cada grupo debe
          ssh  usuario@servidor
 
 
-> :warning: **NOTA**: Las credenciales se les entregaran en la pizarra.
+> :warning: **NOTA**: Las credenciales se les entregaran en el chat.
 
 
 Mediante el comando SSH podremos entrar al servidor para el curso. 
