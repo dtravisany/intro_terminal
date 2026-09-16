@@ -221,7 +221,7 @@ Ejecutar:
 
 Es diferente?
 
-Es concordante con la información mostrada en NCBI para ese [genoma](https://www.ncbi.nlm.nih.gov/genome/?term=Piscirickettsia%20salmonis)?
+Es concordante con la información mostrada en NCBI para ese [genoma](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000300295.4/)?
 
 
 ### PIPES
