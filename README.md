@@ -193,6 +193,14 @@ Esto significa write (w) quit (q) and no questions (!).
 
 Haremos algunos otros ejemplos.
 
+Salimos de nuestro directorio recién creado
+
+		cd ..
+
+Volvemos a entrar a ejemplo
+
+		cd ejemplo
+
 
 ### Revisión de Archivos Parte 3 (Búsqueda de expresiones).
 
